@@ -13,8 +13,8 @@ https://openreview.net/forum?id=HJgTHnActQ
 <img src="https://user-images.githubusercontent.com/20943085/46211908-aada0080-c36f-11e8-9b1a-7d8f683313e4.png" width="90%"></img>
 
 ##### Prerequisite
-> python3.6
-> Pytorch0.4
+> *python3.6\\
+> *Pytorch0.4
 
 ##### To download the data:
 > bash data_download.sh
