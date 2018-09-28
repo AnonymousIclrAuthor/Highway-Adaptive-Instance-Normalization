@@ -17,7 +17,7 @@ https://openreview.net/forum?id=HJgTHnActQ
 * Pytorch0.4
 
 ##### To download the data:
-> bash data_download.sh
+> $ bash data_download.sh
 
 ##### Train
 * Import run.py file from the jupyter notebook. (An example is example.ipynb)
