@@ -1,6 +1,7 @@
 # Local Image to Image Translation Via Pixel wise Highway Adaptive Instance Normalization
 
 ### The result of LOcal Mask based Image Translation (LOMIT)
+##### (black, smile) => (blonde, non-smile)
 <img src="https://user-images.githubusercontent.com/20943085/46212917-2b99fc00-c372-11e8-8da0-384b7ba7418c.png" width="90%"></img>
 
 ### Our model overview
