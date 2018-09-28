@@ -1,1 +1,1 @@
-# Local Image to Image Translation Via Highway Adaptive Instance Normalization
+# Local Image to Image Translation Via Pixel wise Highway Adaptive Instance Normalization
