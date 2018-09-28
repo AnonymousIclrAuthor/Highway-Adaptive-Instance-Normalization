@@ -1,0 +1,16 @@
+/*
+/*/
+
+!.gitignore
+!data_loader.py
+!model.py
+!run.py
+!data_download.sh
+
+!configs/
+!utils/
+
+utils/__pycache__/*
+
+
+
