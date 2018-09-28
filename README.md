@@ -12,4 +12,14 @@ https://openreview.net/forum?id=HJgTHnActQ
 ### The cosegmentation module
 <img src="https://user-images.githubusercontent.com/20943085/46211908-aada0080-c36f-11e8-9b1a-7d8f683313e4.png" width="90%"></img>
 
+##### Prerequisite
+*python3.6  
+*Pytorch0.4
+
+##### To download the data:
+> bash data_download.sh
+
+##### Train
+* Import run.py file from the jupyter notebook. (An example is example.ipynb)
+
 ##### Test link will be released soon.
