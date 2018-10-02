@@ -249,7 +249,8 @@ class Run(object):
                  self.config['LAMBDA_C'] * loss_cross_c + \
                  self.config['LAMBDA_MASK_MIN'] * (g_loss_mask_min) + \
                  self.config['LAMBDA_MASK_SMOOTH'] * g_loss_mask_smooth + \
-                 self.config['LAMBDA_MASK_SIM'] * g_loss_mask_sim
+                 self.config['LAMBDA_MASK_SIM'] * g_loss_mask_sim + \
+                 self.config['LAMBDA_STYLE_REG'] * style_reg
 
         if isTrain:
             self.G_optimizer.zero_grad()

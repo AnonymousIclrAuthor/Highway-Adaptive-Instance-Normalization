@@ -1,6 +1,6 @@
 
 # GPU SETTING
-GPU1: 1 #3
+GPU1: 0 #3
 GPU2: 1 #1
 DATA_PARALLEL: False
 
