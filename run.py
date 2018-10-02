@@ -224,8 +224,9 @@ class Run(object):
         loss_cross_rec = self.l1_criterion(x_ABA, x_A) + self.l1_criterion(x_BAB, x_B)
         loss_ae_rec = self.l1_criterion(x_AA, x_A) + self.l1_criterion(x_BB, x_B)
 
-        loss_cross_s = self.config['LAMBDA_S_B']*(self.l1_criterion(s_fAB, s_fB) + self.l1_criterion(s_fBA, s_fA)) + \
-                        self.config['LAMBDA_S_F']*(self.l1_criterion(s_bAB, s_bA) + self.l1_criterion(s_bBA, s_bB))
+        loss_cross_s_b = (self.l1_criterion(s_bAB, s_bA) + self.l1_criterion(s_bBA, s_bB))
+        loss_cross_s_f = (self.l1_criterion(s_fAB, s_fB) + self.l1_criterion(s_fBA, s_fA))
+        
         loss_cross_c = self.l1_criterion(c_AB, c_A) + self.l1_criterion(c_BA, c_B)
 
         mask_sim_A, mask_min_A, mask_smooth_A = self.mask_criterion([m_A, m_AB, m_AA], c_A.detach())
@@ -243,7 +244,9 @@ class Run(object):
                  self.config['LAMBDA_X_REC'] * (loss_ae_rec) + \
                  self.config['LAMBDA_X_CYC'] * loss_cross_rec + \
                  self.config['LAMBDA_CLS'] * g_loss_cls + \
-                 self.config['LAMBDA_LATENT_REC'] * (loss_cross_c + loss_cross_s) + \
+                 self.config['LAMBDA_S_F'] * loss_cross_s_f + \
+                 self.config['LAMBDA_S_B'] * loss_cross_s_b + \
+                 self.config['LAMBDA_C'] * loss_cross_c + \
                  self.config['LAMBDA_MASK_MIN'] * (g_loss_mask_min) + \
                  self.config['LAMBDA_MASK_SMOOTH'] * g_loss_mask_smooth + \
                  self.config['LAMBDA_MASK_SIM'] * g_loss_mask_sim
@@ -257,8 +260,9 @@ class Run(object):
         self.loss['G/loss_fake'] = g_loss_fake.item()
         self.loss['G/loss_cross_rec'] = loss_cross_rec.item() * self.config['LAMBDA_X_REC']
         self.loss['G/loss_ae_rec'] = loss_ae_rec.item() * self.config['LAMBDA_X_REC']
-        self.loss['G/loss_cross_c'] = loss_cross_c.item() * self.config['LAMBDA_LATENT_REC']
-        self.loss['G/loss_cross_s'] = loss_cross_s.item() * self.config['LAMBDA_LATENT_REC']
+        self.loss['G/loss_cross_c'] = loss_cross_c.item() * self.config['LAMBDA_C']
+        self.loss['G/loss_cross_s'] = (loss_cross_s_f.item() * self.config['LAMBDA_S_F']) + \
+                                        (loss_cross_s_b.item() * self.config['LAMBDA_S_B'])
         self.loss['G/D_loss_cls'] = g_loss_cls.item() * self.config['LAMBDA_CLS']
         self.loss['G/loss_mask'] = (g_loss_mask_min.item()) * self.config['LAMBDA_MASK_MIN']
         self.loss['G/loss_mask_smooth'] = g_loss_mask_smooth.item() * self.config['LAMBDA_MASK_SMOOTH']
