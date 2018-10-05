@@ -63,4 +63,4 @@ MODE: train
 PRINT_EVERY: 1000
 NUM_PRINT: 2 # min: 1
 MODEL_SAVE_PATH: models/
-SAVE_NAME: min_0.0001_sim1.0_reg0.01_color_hair
+SAVE_NAME: min_0.0001_sim1.0_reg0.01_color_hair_adaIN

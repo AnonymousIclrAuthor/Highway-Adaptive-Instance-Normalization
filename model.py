@@ -308,9 +308,15 @@ class LinearBlock(nn.Module):
 
         if activation == 'relu':
             self.activation = nn.ReLU(inplace=True)
+        elif activation == 'lrelu':
+            self.activation = nn.LeakyReLU(0.01, inplace=True)
         elif activation == 'prelu':
             self.activation = nn.PReLU(num_parameters=1, init=0.25)
-        else:
+        elif activation == 'tanh':
+            self.activation = nn.Tanh()
+        elif activation == 'sigmoid':
+            self.activation = nn.Sigmoid()
+        elif activation == 'none':
             self.activation = None
 
     def forward(self, x):
