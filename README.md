@@ -7,6 +7,7 @@
 ##### Prerequisite
 * python3.6  
 * Pytorch0.4
+* matplotlib 2.2.2
 
 ##### To download the data:
 >$ bash data_download.sh
