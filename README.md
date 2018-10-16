@@ -18,7 +18,7 @@
 ##### Test link will be released soon.
 
 ### Our model overview
-<img src="https://user-images.githubusercontent.com/20943085/46211567-d1e40280-c36e-11e8-986b-76f10c19a1cc.png" width="90%"></img>
+<img src="https://user-images.githubusercontent.com/20943085/47040629-a57b1380-d1c1-11e8-9635-32d449db0227.png" width="90%"></img>
 
 ### The cosegmentation module
 <img src="https://user-images.githubusercontent.com/20943085/46211908-aada0080-c36f-11e8-9b1a-7d8f683313e4.png" width="90%"></img>
