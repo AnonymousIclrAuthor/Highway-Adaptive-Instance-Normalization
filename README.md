@@ -5,15 +5,15 @@
 
 ## Usage
 
-##### Prerequisite
+#### Prerequisite
 * python3.6  
 * Pytorch0.4
 * matplotlib 2.2.2
 
-##### To download the CelebA:
+#### To download the CelebA:
 >$ bash data_download.sh
 
-##### Train
+#### Train
 * We have used a jupyter notebook for the training. (An example is in "Hair color, Non-smile.ipynb")
 
 
