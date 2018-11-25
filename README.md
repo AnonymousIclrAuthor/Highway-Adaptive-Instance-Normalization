@@ -4,7 +4,7 @@
 * A demo is in a following link : http://123.108.168.4:5000/
 
 ## Usage
------------------------------------------------------------------------------------------------------------------------------------------
+
 ##### Prerequisite
 * python3.6  
 * Pytorch0.4
@@ -16,10 +16,8 @@
 ##### Train
 * We have used a jupyter notebook for the training. (An example is in "Hair color, Non-smile.ipynb")
 
------------------------------------------------------------------------------------------------------------------------------------------
 
 ## The result of LOcal Mask based Image Translation (LOMIT)
------------------------------------------------------------------------------------------------------------------------------------------
 
 ##### Comparison with StarGAN (black, smile) => (blonde, non-smile)
 <img src="https://user-images.githubusercontent.com/45184715/48979753-a2e5d500-f102-11e8-9ef2-d9395ca05a7d.png" width="90%"></img>
@@ -38,6 +36,3 @@ First row of each macro row denotes an input image and the second row indicates 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 <img src="https://user-images.githubusercontent.com/45184715/48979770-bf820d00-f102-11e8-8f13-cc9f6e815c92.png" width="90%"></img>
-
-### Our model overview
-<img src="https://user-images.githubusercontent.com/20943085/47040629-a57b1380-d1c1-11e8-9635-32d449db0227.png" width="90%"></img>
