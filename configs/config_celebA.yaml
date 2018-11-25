@@ -1,6 +1,6 @@
 
 # GPU SETTING
-GPU1: 0 #3
+GPU1: 2 #3
 GPU2: 1 #1
 DATA_PARALLEL: False
 
@@ -12,8 +12,9 @@ CELEBA_CROP_SIZE: 178
 CELEBA_PATH: data/CelebA_nocrop/images
 ATTR_PATH: data/list_attr_celeba.txt
 C_DIM: 4
-SELECTED_ATTRS: [Black_Hair, Blond_Hair, Brown_Hair, Smiling]
-# Mustache, No_Beard, Male, Goatee
+SELECTED_ATTRS: [Black_Hair, Blond_Hair, Brown_Hair, Smiling] # Black_Hair, Blond_Hair, Brown_Hair, Smiling
+# Mustache, No_Beard, Male, Goatee | Heavy_Makeup, Wearing_Lipstick
+# Make
 
 NUM_ITERS: 200000
 BATCH_SIZE: 8
@@ -40,8 +41,11 @@ LAMBDA_GP: 10.0
 
 LAMBDA_MASK_MIN: 0.0001
 LAMBDA_MASK_SMOOTH: 0.0
-LAMBDA_MASK_SIM: 1.0
-LAMBDA_STYLE_REG: 0.01
+LAMBDA_MASK_SIM: 0.1
+LAMBDA_STYLE_REG: 0.0
+# Hair,Smile: 0.0001, 1.0, 0.01 | 0.0001, 0.1, 0.01 | 0.0001, 0.1, 0.0
+# Gender, F.H: 0.0001, 0.0, 0.0
+# Makeup : 0.0001, 0.1, 0.01 | 0, 0, 0
 
 # MODEL OPTIONS
 G:
@@ -60,7 +64,7 @@ START: 0
 LOAD_MODEL: False
 NUM_WORKERS: 1
 MODE: train
-PRINT_EVERY: 1000
+PRINT_EVERY: 10000
 NUM_PRINT: 2 # min: 1
 MODEL_SAVE_PATH: models/
-SAVE_NAME: min_0.0001_sim1.0_reg0.01_color_hair_adaIN
+SAVE_NAME: orig_hadain_S,H_ver3
