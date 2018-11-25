@@ -19,12 +19,12 @@
 
 ## The result of LOcal Mask based Image Translation (LOMIT)
 
-##### Comparison with StarGAN (black, smile) => (blonde, non-smile)
+#### Comparison with StarGAN (black, smile) => (blonde, non-smile)
 <img src="https://user-images.githubusercontent.com/45184715/48979753-a2e5d500-f102-11e8-9ef2-d9395ca05a7d.png" width="90%"></img>
 
 From the top, each row denotes input image, an exemplar and a corresponding output.
 
-##### Other results (Facial Hair and Gender translation)
+#### Other results (Facial Hair and Gender translation)
 
 First row of each macro row denotes an input image and the second row indicates an exemplar. The third row is a corresponding output.
 
