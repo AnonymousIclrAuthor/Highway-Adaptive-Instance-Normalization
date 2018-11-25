@@ -1,7 +1,7 @@
 # Local Image to Image Translation Via Pixel wise Highway Adaptive Instance Normalization
 
 ## Demo
-* A demo is in a following link : http://123.108.168.4:5000/
+* A demo page is in the following link : http://123.108.168.4:5000/
 
 ## Usage
 
